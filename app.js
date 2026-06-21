@@ -113,3 +113,55 @@ if (corporateForm) {
         });
     });
 }
+// Intercept Audit Form Submission, Send Email & Display Fading Custom Alert
+const auditForm = document.querySelector('.audit-intake-form');
+
+if (auditForm) {
+    auditForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop page from hard-reloading
+
+        const formData = new FormData(auditForm);
+        const submitButton = auditForm.querySelector('.audit-submit');
+        
+        // Visual indicator that system is transmitting data
+        submitButton.innerText = "DEPLOYING GROUND INTEL OPERATIVES...";
+        submitButton.style.opacity = "0.7";
+
+        const targetUrl = auditForm.getAttribute('action') || 'https://api.web3forms.com/submit';
+
+        // Asynchronously post data to Web3Forms link
+        fetch(targetUrl, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Trigger the interactive Success Pop-Up
+                const popup = document.getElementById('intel-success-popup');
+                popup.classList.add('popup-active');
+
+                // Reset the form values for clean slate
+                auditForm.reset();
+
+                // Automatically dissolve the pop-up after exactly 4 seconds
+                setTimeout(() => {
+                    popup.classList.remove('popup-active');
+                }, 4000);
+            } else {
+                alert("Audit routing response mismatch. Please review input attributes.");
+            }
+        })
+        .catch(error => {
+            console.error("Audit Transmission Error Stack:", error);
+            alert("Secure connection loss. Ground intelligence deployment offline.");
+        })
+        .finally(() => {
+            // Restore button text
+            submitButton.innerText = "DEPLOY FIELD INTELLIGENCE OPERATION";
+            submitButton.style.opacity = "1";
+        });
+    });
+}
