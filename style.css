@@ -1355,3 +1355,78 @@ img.brand-logo-img {
     font-family: monospace;
     text-transform: uppercase;
 }
+/* ==========================================================================
+   Secure Transmission Pop-up UI
+   ========================================================================== */
+.intel-popup-shield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 15, 26, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Class to trigger structural display */
+.intel-popup-shield.popup-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.intel-popup-box {
+    background: #0d111a;
+    border: 2px solid var(--accent-neon);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 450px;
+    box-shadow: 0 0 30px var(--accent-glow);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.intel-popup-shield.popup-active .intel-popup-box {
+    transform: scale(1);
+}
+
+.popup-icon i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px var(--accent-glow);
+}
+
+.intel-popup-box h3 {
+    color: #fff;
+    font-family: monospace;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+}
+
+.intel-popup-box p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Fading loading line inside the pop-up */
+.popup-loading-bar {
+    height: 3px;
+    background: var(--accent-neon);
+    width: 100%;
+    transform-origin: left;
+    animation: shrinkBar 4s linear forwards;
+}
+
+@keyframes shrinkBar {
+    from { transform: scaleX(1); }
+    to { transform: scaleX(0); }
+}

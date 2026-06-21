@@ -59,3 +59,52 @@ function toggleNavMatrix() {
         menuIcon.className = "fas fa-th-large"; // Snaps back to standard matrix grid
     }
 }
+// Intercept Form Submission, Send Email & Display Fading Custom Alert
+const corporateForm = document.querySelector('.corporate-intake-form');
+
+if (corporateForm) {
+    corporateForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop page from hard-reloading
+
+        const formData = new FormData(corporateForm);
+        const submitButton = corporateForm.querySelector('.corporate-submit');
+        
+        // Visual indicator that system is transmitting data
+        submitButton.innerText = "TRANSMITTING BRIEF...";
+        submitButton.style.opacity = "0.6";
+
+        // Asynchronously post data to Web3Forms / Formspree link
+        fetch(corporateForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Trigger the interactive Success Pop-Up
+                const popup = document.getElementById('intel-success-popup');
+                popup.classList.add('popup-active');
+
+                // Reset the form values for clean slate
+                corporateForm.reset();
+
+                // Automatically dissolve the pop-up after exactly 4 seconds
+                setTimeout(() => {
+                    popup.classList.remove('popup-active');
+                }, 4000);
+            } else {
+                alert("Transmission pipeline error. Please check connectivity.");
+            }
+        })
+        .catch(error => {
+            alert("Secure connection loss. Transmission failed.");
+        })
+        .finally(() => {
+            // Restore button text
+            submitButton.innerText = "INITIALIZE RISK ADVISORY BRIEFING";
+            submitButton.style.opacity = "1";
+        });
+    });
+}

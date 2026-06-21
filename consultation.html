@@ -54,7 +54,8 @@
             
             <!-- LEFT COLUMN: The Sophisticated Intake Form -->
             <div class="form-workspace-card">
-                <form class="corporate-intake-form" onsubmit="event.preventDefault();">
+                <form class="corporate-intake-form" action="http://api.web3forms.com/submit" method="post">
+                    <input type="hidden" name="access_key" value="bf152ce1-2529-464a-8a19-a536b15a4740">
                     
                     <div class="form-section-title">[01] CORPORATE IDENTIFICATION</div>
                     <div class="form-row">
@@ -178,3 +179,12 @@
     <script src="app.js"></script>
 </body>
 </html>
+<!-- Secure Status Confirmation Overlay -->
+    <div id="intel-success-popup" class="intel-popup-shield">
+        <div class="intel-popup-box">
+            <div class="popup-icon"><i class="fas fa-shield-check" style="color: #00ffcc;"></i></div>
+            <h3>TRANSMISSION SUCCESSFUL</h3>
+            <p>Corporate risk parameters ingested securely. A specialized intelligence analyst will review your profile and contact you within 24 operational hours.</p>
+            <div class="popup-loading-bar"></div>
+        </div>
+    </div>
