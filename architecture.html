@@ -3,51 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THRAX | Secure Architecture Module</title>
+    <title>THRAX | Operations & Architecture FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="cyber-theme">
 
-    <header>
-        <nav class="navbar">
-            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">THRAX<span>.hq</span></a></div>
-            <ul class="nav-links">
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="automation.html">Next Module &rarr;</a></li>
-            </ul>
+    <!-- Sticky Navigation Header -->
+    <header class="main-header sticky-header">
+        <div class="logo-container">
+            <img src="thrax-logo.png" alt="THRAX ANALYTICS Logo" class="brand-logo-img">
+            <span class="brand-name">THRAX <span class="accent-text">ANALYTICS</span></span>
+        </div>
+        
+        <div class="nav-matrix-control" onclick="toggleNavMatrix()">
+            <i class="fas fa-th-large" id="menu-icon"></i>
+            <span class="control-label">MENU</span>
+        </div>
+
+        <nav class="nav-links" id="nav-links-container">
+            <a href="index.html">Command Center</a>
+            <a href="analytics.html">Services</a>
+            <a href="architecture.html" class="active-node">FAQs</a>
+            <a href="automation.html">Contact Us</a>
         </nav>
     </header>
 
-    <main class="module-page">
-        <section class="module-hero">
-            <span class="module-tag">Module_02 // System Hardening</span>
-            <h1>Secure Architecture & System Defense</h1>
-            <p class="module-lead">Engineered to neutralize digital threats, isolate critical parameters, and maintain operational continuity across high-risk networks.</p>
-        </section>
+    <!-- Main Workspace -->
+    <main class="module-content">
+        
+        <div class="page-title-section">
+            <p class="system-status">// OPERATIONS_DESK // ARCHITECTURE_KNOWLEDGE_BASE</p>
+            <h1>Operational Architecture & Protocol FAQ</h1>
+            <div class="accent-bar"></div>
+            <p class="services-manifesto">
+                Review the structural frameworks, legal standards, and field methodologies behind our corporate screening workflows. We approach asset protection and background verification with absolute precision, ensuring complete compliance and institutional data security.
+            </p>
+        </div>
 
-        <section class="module-details">
-            <div class="detail-block">
-                <h2>Network Isolation & Cryptography</h2>
-                <p>We build communication frameworks utilizing end-to-end encryption protocols. By compartmentalizing data streams and limiting vector access points, THRAX ensures proprietary business information remains entirely unreadable to unauthorized intercepts.</p>
-            </div>
-
-            <div class="detail-block">
-                <h2>Vulnerability Management & Auditing</h2>
-                <p>Digital perimeters face constant exposure. Our structural audits simulate aggressive penetrations to discover, patch, and reinforce weak configuration links, transforming corporate networks into hardened, resilient strongholds.</p>
-            </div>
+        <div class="faq-matrix-container">
             
-            <div class="pipeline-navigation">
-                <a href="analytics.html" class="btn btn-secondary">&larr; Previous Module</a>
-                <a href="automation.html" class="btn btn-primary">Proceed to System Automation &rarr;</a>
+            <!-- SECTION 01: OPERATIONAL METHODOLOGY -->
+            <div class="faq-pillar-section">
+                <div class="pillar-header">
+                    <i class="fas fa-eye"></i>
+                    <h2>[01] Operational Scope & Field Methodology</h2>
+                </div>
+                
+                <div class="faq-node-accordion">
+                    <div class="faq-question" onclick="toggleFaqNode(this)">
+                        <span>What separates THRAX from standard automated background check software?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard screening software relies strictly on outdated digital databases that miss critical local nuances. THRAX merges advanced digital OSINT data indexing with on-the-ground physical intelligence verification. Our localized field operatives physically locate declared addresses, perform face-to-face guarantor interviews, and map precise GPS coordinates to completely eliminate fictitious profiles and "ghost addresses."</p>
+                    </div>
+                </div>
+
+                <div class="faq-node-accordion">
+                    <div class="faq-question" onclick="toggleFaqNode(this)">
+                        <span>How do your localized field teams verify candidate addresses?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our verification process involves physical deployment to the stated address grid. Operatives cross-verify the location with community landmarks, local leadership, or building management, taking down exact spatial coordinates. This multi-layered approach ensures your organization is protected against fraudulent identity claims and insecure residential data points.</p>
+                    </div>
+                </div>
             </div>
-        </section>
+
+            <!-- SECTION 02: LEGAL & DATA SECURITY -->
+            <div class="faq-pillar-section">
+                <div class="pillar-header">
+                    <i class="fas fa-gavel"></i>
+                    <h2>[02] Legal Compliance & Institutional Data Security</h2>
+                </div>
+
+                <div class="faq-node-accordion">
+                    <div class="faq-question" onclick="toggleFaqNode(this)">
+                        <span>Is the THRAX screening framework compliant with regional data protection standards?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolute asset security and compliance are central to our model. Our screening protocols are fully aligned with prevailing data protection frameworks, including the Nigeria Data Protection Commission (NDPC) standards. We enforce strict data classification and clear consent matrices before any candidate assessment or physical tracking is initialized.</p>
+                    </div>
+                </div>
+
+                <div class="faq-node-accordion">
+                    <div class="faq-question" onclick="toggleFaqNode(this)">
+                        <span>How is client and candidate data segregated and encrypted?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All data received through our intake terminal is securely sandboxed and heavily encrypted. We maintain zero open-access databases for corporate briefs, meaning candidate data collected during a Field Intelligence Audit is segregated strictly for your organization's specific review file, protecting you against third-party data leak vulnerabilities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 03: LOGISTICS & ENGAGEMENT -->
+            <div class="faq-pillar-section">
+                <div class="pillar-header">
+                    <i class="fas fa-sliders-h"></i>
+                    <h2>[03] Engagement Logistics & Turnaround Tiers</h2>
+                </div>
+
+                <div class="faq-node-accordion">
+                    <div class="faq-question" onclick="toggleFaqNode(this)">
+                        <span>What is the standard turnaround time for a complete Background Check Score (BCS) report?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Turnaround timelines are optimized based on the selected urgency tier. Routine preventative assessments (Tier 3) are typically finalized within 48 to 72 operational hours. High-risk financial profiles (Tier 2) or active asset protection concerns (Tier 1) are expedited immediately to minimize corporate risk exposure.</p>
+                    </div>
+                </div>
+
+                <div class="faq-node-accordion">
+                    <div class="faq-question" onclick="toggleFaqNode(this)">
+                        <span>How does the Free Tier-3 Premium Field Intelligence Audit work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The Free Tier-3 Audit serves as our operational proof-of-concept. Corporate clients can submit the profile metrics of a single candidate completely risk-free. Our team processes the file, deploys ground verification assets, generates a comprehensive baseline report, and delivers it straight to your official inbox to showcase our clinical speed and precision before formal institutional alignment.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p class="copyright">&copy; 2026 THRAX HQ. All rights reserved.</p>
-        </div>
-    </footer>
-
+    <script src="app.js"></script>
 </body>
 </html>

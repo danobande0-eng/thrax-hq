@@ -165,3 +165,23 @@ if (auditForm) {
         });
     });
 }
+// Interactive Accordion Framework for the FAQ Matrix
+function toggleFaqNode(element) {
+    const accordionNode = element.parentElement;
+    const answerContainer = accordionNode.querySelector('.faq-answer');
+    
+    // Check if node is already open
+    const isOpen = accordionNode.classList.contains('node-open');
+    
+    // First, close all other open FAQ containers for a clean accordion effect
+    document.querySelectorAll('.faq-node-accordion').forEach(node => {
+        node.classList.remove('node-open');
+        node.querySelector('.faq-answer').style.maxHeight = null;
+    });
+    
+    // If it wasn't open, slide it down instantly using scrollHeight measurements
+    if (!isOpen) {
+        accordionNode.classList.add('node-open');
+        answerContainer.style.maxHeight = answerContainer.scrollHeight + "px";
+    }
+}
