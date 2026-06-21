@@ -60,6 +60,7 @@ function toggleNavMatrix() {
     }
 }
 // Intercept Form Submission, Send Email & Display Fading Custom Alert
+// Intercept Form Submission, Send Email & Display Fading Custom Alert
 const corporateForm = document.querySelector('.corporate-intake-form');
 
 if (corporateForm) {
@@ -73,8 +74,11 @@ if (corporateForm) {
         submitButton.innerText = "TRANSMITTING BRIEF...";
         submitButton.style.opacity = "0.6";
 
-        // Asynchronously post data to Web3Forms / Formspree link
-        fetch(corporateForm.action, {
+        // Fallback target link in case the DOM attribute reads blank
+        const targetUrl = corporateForm.getAttribute('action') || 'https://api.web3forms.com/submit';
+
+        // Asynchronously post data to Web3Forms link
+        fetch(targetUrl, {
             method: 'POST',
             body: formData,
             headers: {
@@ -95,10 +99,11 @@ if (corporateForm) {
                     popup.classList.remove('popup-active');
                 }, 4000);
             } else {
-                alert("Transmission pipeline error. Please check connectivity.");
+                alert("Transmission pipeline response error. Please check form values.");
             }
         })
         .catch(error => {
+            console.error("Transmission Error Stack:", error);
             alert("Secure connection loss. Transmission failed.");
         })
         .finally(() => {
