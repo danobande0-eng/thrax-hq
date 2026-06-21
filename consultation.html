@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THRAX | Enterprise Risk Briefing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cyber-theme">
+
+    <!-- Sticky Navigation Header -->
+    <header class="main-header sticky-header">
+        <div class="logo-container">
+            <img src="thrax-logo.png" alt="THRAX ANALYTICS Logo" class="brand-logo-img">
+            <span class="brand-name">THRAX <span class="accent-text">ANALYTICS</span></span>
+        </div>
+        
+        <div class="nav-matrix-control" onclick="toggleNavMatrix()">
+            <i class="fas fa-th-large" id="menu-icon"></i>
+            <span class="control-label">MENU</span>
+        </div>
+
+        <nav class="nav-links" id="nav-links-container">
+            <a href="index.html">Command Center</a>
+            <a href="analytics.html">Services</a>
+            <a href="architecture.html">FAQs</a>
+            <a href="automation.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="module-content">
+        
+        <div class="page-title-section">
+            <p class="system-status">// SECURE_UPLINK // INTAKE_PROTOCOL_2.0</p>
+            <h1>Initialize Corporate Risk Advisory & Briefing</h1>
+            <div class="accent-bar"></div>
+            <p class="services-manifesto">
+                Engage our specialized risk mitigation team to conduct a comprehensive structural analysis of your organization's current vulnerability profile. Submitting this brief initiates our confidential assessment framework, enabling our analysts to review your corporate posture prior to formal alignment.
+            </p>
+        </div>
+
+        <!-- Confidentiality Assurance Block -->
+        <div class="confidentiality-shield-box">
+            <div class="shield-icon"><i class="fas fa-user-secret"></i></div>
+            <div class="shield-text">
+                <h3>Institutional Non-Disclosure & Data Encryption Guarantee</h3>
+                <p>All transmissions via this terminal are encrypted. In compliance with data protection protocols, information submitted here is treated as highly confidential, accessed strictly by cleared intelligence personnel, and instantly bound by our standard institutional non-disclosure framework.</p>
+            </div>
+        </div>
+
+        <div class="consultation-split-layout">
+            
+            <!-- LEFT COLUMN: The Sophisticated Intake Form -->
+            <div class="form-workspace-card">
+                <form class="corporate-intake-form" onsubmit="event.preventDefault();">
+                    
+                    <div class="form-section-title">[01] CORPORATE IDENTIFICATION</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Corporate Entity Name</label>
+                            <input type="text" placeholder="e.g., Global Logistics Corp" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Industry Vertical / Sector</label>
+                            <input type="text" placeholder="e.g., Financial Services, Tech Infrastructure" required class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Official Email Address</label>
+                            <input type="email" placeholder="e.g., security@yourfirm.com" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Operational Scale (Workforce Size)</label>
+                            <select class="form-input custom-select">
+                                <option value="" disabled selected>Select headcount threshold...</option>
+                                <option value="small">1 – 50 Personnel (Emerging Enterprise)</option>
+                                <option value="medium">51 – 250 Personnel (Mid-Market Institutional)</option>
+                                <option value="large">251 – 1,000 Personnel (Large-Scale Enterprise)</option>
+                                <option value="enterprise">1,000+ Personnel (Global / Conglomerate Matrix)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section-title">[02] RISK MATRIX & EXPOSURE VECTORS</div>
+                    <div class="form-group">
+                        <label style="margin-bottom: 12px; display: block;">Primary Security Vulnerabilities Under Review (Select all that apply):</label>
+                        <div class="checkbox-matrix-grid">
+                            <label class="matrix-checkbox-label">
+                                <input type="checkbox"> <span>Pre-Employment Verification Gaps</span>
+                            </label>
+                            <label class="matrix-checkbox-label">
+                                <input type="checkbox"> <span>Insider Threat Exposure & Data Leakage</span>
+                            </label>
+                            <label class="matrix-checkbox-label">
+                                <input type="checkbox"> <span>Vendor, Contractor & Supply Chain Integrity</span>
+                            </label>
+                            <label class="matrix-checkbox-label">
+                                <input type="checkbox"> <span>Fictitious Profiles, Ghost Addresses & Unreliable Guarantors</span>
+                            </label>
+                            <label class="matrix-checkbox-label">
+                                <input type="checkbox"> <span>Executive / Board-Level Vulnerabilities</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row" style="margin-top: 25px;">
+                        <div class="form-group">
+                            <label>Operational Threat Urgency Tier</label>
+                            <select class="form-input custom-select alert-select">
+                                <option value="routine">Tier 3: Routine Preventative Assessment</option>
+                                <option value="elevated">Tier 2: Elevated Exposure Monitoring</option>
+                                <option value="critical">Tier 1: Immediate/Active Asset Protection Concern</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section-title">[03] STRATEGIC OBJECTIVES</div>
+                    <div class="form-group">
+                        <label>Scope of Desired Briefing / Brief Description of Risk Posture Concerns</label>
+                        <textarea placeholder="Provide broad details regarding specific screening deficiencies or assets requiring tactical intelligence mapping..." rows="6" class="form-textarea"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn corporate-submit">INITIALIZE RISK ADVISORY BRIEFING</button>
+                </form>
+            </div>
+
+            <!-- RIGHT COLUMN: Workflow & Validation Sidepanel -->
+            <div class="workflow-sidepanel">
+                <div class="timeline-container-card">
+                    <h3>Engagement Protocol</h3>
+                    <p class="sidepanel-desc">Following transmission ingestion, your file proceeds through three distinct clinical milestones:</p>
+                    
+                    <div class="protocol-step">
+                        <div class="step-num">01</div>
+                        <div class="step-details">
+                            <h4>Data Ingestion & Triage</h4>
+                            <p>Our threat-mitigation desk cross-references your sector layout to isolate known industry risk vectors.</p>
+                        </div>
+                    </div>
+
+                    <div class="protocol-step">
+                        <div class="step-num">02</div>
+                        <div class="step-details">
+                            <h4>Analyst Assignment</h4>
+                            <p>A specialized corporate intelligence officer is appointed to compile a baseline operational brief.</p>
+                        </div>
+                    </div>
+
+                    <div class="protocol-step">
+                        <div class="step-num">03</div>
+                        <div class="step-details">
+                            <h4>Secure Briefing Window</h4>
+                            <p>A calendar link for an encrypted video or voice consultation is dispatched to align on field screening operations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-stat-box">
+                    <div class="stat-node">
+                        <span class="stat-val">100%</span>
+                        <span class="stat-lbl">Data Segregation</span>
+                    </div>
+                    <div class="stat-node">
+                        <span class="stat-val">&lt; 24h</span>
+                        <span class="stat-lbl">Triage Turnaround</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

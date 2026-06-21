@@ -1113,3 +1113,245 @@ img.brand-logo-img {
     color: var(--accent-neon);
     box-shadow: 0 0 15px var(--accent-glow);
 }
+/* ==========================================================================
+   Enterprise Consultation Form & Shield Component Classes
+   ========================================================================== */
+
+.confidentiality-shield-box {
+    display: flex;
+    align-items: center;
+    background: rgba(14, 165, 233, 0.04);
+    border: 1px dashed rgba(0, 255, 204, 0.3);
+    padding: 25px 30px;
+    border-radius: 6px;
+    margin-bottom: 40px;
+    gap: 25px;
+}
+
+.shield-icon i {
+    font-size: 2.5rem;
+    color: var(--accent-neon);
+    text-shadow: 0 0 15px var(--accent-glow);
+}
+
+.shield-text h3 {
+    margin: 0 0 5px 0;
+    color: #fff;
+    font-size: 1.15rem;
+}
+
+.shield-text p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.consultation-split-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-workspace-card {
+    flex: 2;
+    min-width: 320px;
+    background: #0d111a;
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.workflow-sidepanel {
+    flex: 1;
+    min-width: 290px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Intake Form Architecture */
+.form-section-title {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--accent-neon);
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    margin-top: 35px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 8px;
+}
+.form-section-title:first-of-type { margin-top: 0; }
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.custom-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2300ffcc' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/\%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) center;
+    cursor: pointer;
+}
+
+/* Interactive Checkbox Matrices */
+.checkbox-matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+@media(max-width:600px){ .checkbox-matrix-grid { grid-template-columns: 1fr; } }
+
+.matrix-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.matrix-checkbox-label:hover {
+    border-color: var(--accent-neon);
+    background: rgba(0, 255, 204, 0.02);
+}
+
+.matrix-checkbox-label input[type="checkbox"] {
+    accent-color: var(--accent-neon);
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+
+.matrix-checkbox-label span {
+    font-size: 0.88rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.alert-select {
+    border-color: rgba(255,74,74,0.2);
+}
+.alert-select:focus {
+    border-color: #ff4a4a !important;
+}
+
+.corporate-submit {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Timeline Protocol Panel styling */
+.timeline-container-card {
+    background: #111622;
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.timeline-container-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    border-bottom: 2px solid var(--accent-neon);
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-bottom: 15px;
+}
+
+.sidepanel-desc {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.protocol-step {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+.protocol-step:last-of-type { margin-bottom: 0; }
+
+.step-num {
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent-neon);
+    background: rgba(0,255,204,0.07);
+    border: 1px solid rgba(0,255,204,0.2);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.step-details h4 {
+    margin: 0 0 4px 0;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.step-details p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+/* Quick Metrics Blocks */
+.quick-stat-box {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-node {
+    flex: 1;
+    background: rgba(18, 22, 31, 0.6);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.stat-val {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--accent-neon);
+    font-family: monospace;
+}
+
+.stat-lbl {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: monospace;
+    text-transform: uppercase;
+}
