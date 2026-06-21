@@ -3,51 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THRAX | System Automation Module</title>
+    <title>THRAX | Secure Communications Terminal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="cyber-theme">
 
-    <header>
-        <nav class="navbar">
-            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">THRAX<span>.hq</span></a></div>
-            <ul class="nav-links">
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#contact">Initialize Integration</a></li>
-            </ul>
+    <!-- Sticky Navigation Header -->
+    <header class="main-header sticky-header">
+        <div class="logo-container">
+            <img src="thrax-logo.png" alt="THRAX ANALYTICS Logo" class="brand-logo-img">
+            <span class="brand-name">THRAX <span class="accent-text">ANALYTICS</span></span>
+        </div>
+        
+        <div class="nav-matrix-control" onclick="toggleNavMatrix()">
+            <i class="fas fa-th-large" id="menu-icon"></i>
+            <span class="control-label">MENU</span>
+        </div>
+
+        <nav class="nav-links" id="nav-links-container">
+            <a href="index.html">Command Center</a>
+            <a href="analytics.html">Services</a>
+            <a href="architecture.html">FAQs</a>
+            <a href="automation.html" class="active-node">Contact Us</a>
         </nav>
     </header>
 
-    <main class="module-page">
-        <section class="module-hero">
-            <span class="module-tag">Module_03 // Optimization Engine</span>
-            <h1>Operational Automation Pipelines</h1>
-            <p class="module-lead">Replacing legacy manual bottlenecks with high-velocity algorithmic scripts built to optimize repetitive tasks with structural perfection.</p>
-        </section>
+    <!-- Main Workspace -->
+    <main class="module-content">
+        
+        <div class="page-title-section">
+            <p class="system-status">// SECURE_COMMUNICATIONS // SECURE_SOCKET_LAYER_ACTIVE</p>
+            <h1>Establish Secure Communications Pipeline</h1>
+            <div class="accent-bar"></div>
+            <p class="services-manifesto">
+                Connect with our strategic advisors to discuss custom background verification deployments, enterprise data integrations, or corporate risk monitoring. If you are experiencing an active asset protection emergency, elevate your operational urgency tier below.
+            </p>
+        </div>
 
-        <section class="module-details">
-            <div class="detail-block">
-                <h2>Autonomous Script Execution</h2>
-                <p>Human delay introduces latency and error. THRAX configures custom execution protocols that process massive operational data fields, trigger immediate security loops, and generate real-time corporate status diagnostics automatically.</p>
-            </div>
-
-            <div class="detail-block">
-                <h2>Workflow Architecture Mapping</h2>
-                <p>We analyze your company’s technical pipelines, pinpoint resource drains, and deploy seamless software integrations that keep backend infrastructure running effortlessly, around the clock.</p>
-            </div>
+        <div class="consultation-split-layout">
             
-            <div class="pipeline-navigation">
-                <a href="architecture.html" class="btn btn-secondary">&larr; Previous Module</a>
-                <a href="index.html#contact" class="btn btn-primary">Establish Integration Framework &rarr;</a>
+            <!-- LEFT COLUMN: The Secure Communications Form -->
+            <div class="form-workspace-card">
+                <form class="corporate-intake-form contact-intake-form" action="https://api.web3forms.com/submit" method="POST">
+                    
+                    <!-- Secure Token Linking to Your Official Business Mail -->
+                    <input type="hidden" name="access_key" value="bf152ce1-2529-464a-8af9-464a8a192529">
+                    <input type="hidden" name="subject" value="NEW SYSTEM TRANSMISSION: Contact Terminal Message Linked">
+
+                    <div class="form-section-title">[01] SENDER CLASSIFICATION</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Official Name</label>
+                            <input type="text" name="sender_fullname" placeholder="Enter your full name" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Corporate Entity / Organization</label>
+                            <input type="text" name="sender_organization" placeholder="e.g., Institutional Capital Group" required class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Secure Communication Mail</label>
+                            <input type="email" name="sender_email" placeholder="e.g., executive_desk@firm.com" required class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Direct Mobile Vector (Optional)</label>
+                            <input type="tel" name="sender_phone" placeholder="Active mobile number" class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-section-title">[02] DISPATCH CONFIGURATION</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Primary Communication Intent</label>
+                            <select name="communication_intent" class="form-input custom-select">
+                                <option value="Enterprise Integration">Custom Enterprise Verification Partnership</option>
+                                <option value="Bespoke Asset Scopes">Bespoke Investigation Project Scope</option>
+                                <option value="Platform Assistance">System Architecture / Platform Assistance</option>
+                                <option value="General Corporate Inquiry">General Corporate Intelligence Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Transmission Urgency Classification</label>
+                            <select name="transmission_urgency" class="form-input custom-select alert-select">
+                                <option value="Standard Business Inquiry">Standard Business Inquiry (Routine Routing)</option>
+                                <option value="Priority Advisory Matrix">Priority Advisory (Escalated Review)</option>
+                                <option value="Critical Asset Protection Vulnerability">Critical Protection (Immediate Intel Triage Required)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section-title">[03] COMMUNICATIONS MATRIX PAYLOAD</div>
+                    <div class="form-group">
+                        <label>Operational Message / Brief Details</label>
+                        <textarea name="transmission_message_payload" placeholder="Outline your corporate screening needs or structural questions in explicit detail..." rows="6" required class="form-textarea"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn corporate-submit contact-submit">INITIALIZE SECURE DISPATCH</button>
+                </form>
             </div>
-        </section>
+
+            <!-- RIGHT COLUMN: Regional Coordinates & Verified Operational Vectors -->
+            <div class="workflow-sidepanel">
+                <div class="timeline-container-card">
+                    <h3>Operational Headquarters Nodes</h3>
+                    <p class="sidepanel-desc">Our localized physical validation framework and screening intelligence wings maintain direct administrative coverage across principal zones:</p>
+                    
+                    <div class="coordinate-node">
+                        <div class="coord-icon"><i class="fas fa-satellite"></i></div>
+                        <div class="coord-details">
+                            <h4>Principal Operational Hub — Minna</h4>
+                            <p>Regional Field Coordination Matrix, Niger State Grid Node.</p>
+                        </div>
+                    </div>
+
+                    <div class="coordinate-node" style="margin-top: 20px;">
+                        <div class="coord-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="coord-details">
+                            <h4>Strategic Field Hub — Bida</h4>
+                            <p>Localized Footprint Verification and Physical Liaison Unit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-container-card" style="margin-top: 25px; border-color: rgba(255, 255, 255, 0.05); background: rgba(255, 255, 255, 0.01);">
+                    <h3>Direct Ingestion Parameters</h3>
+                    <div class="contact-vector-link">
+                        <i class="fas fa-envelope-open" style="color: var(--accent-neon);"></i>
+                        <div>
+                            <span>Official Corporate Inbox:</span>
+                            <p>thraxhq@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-vector-link" style="margin-top: 15px;">
+                        <i class="fas fa-phone-alt" style="color: #0ea5e9;"></i>
+                        <div>
+                            <span>Direct Mobile Vector:</span>
+                            <p>+234 8061237858</p>
+                        </div>
+                    </div>
+                    <div class="contact-vector-link" style="margin-top: 15px;">
+                        <i class="fas fa-clock" style="color: var(--accent-neon); opacity: 0.6;"></i>
+                        <div>
+                            <span>Operational Availability:</span>
+                            <p>24 / 7 / 365 Core Tracking Tiers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p class="copyright">&copy; 2026 THRAX HQ. All rights reserved.</p>
+    <!-- Interactive Messaging Success Pop-up -->
+    <div id="intel-success-popup" class="intel-popup-shield">
+        <div class="intel-popup-box">
+            <div class="popup-icon"><i class="fas fa-envelope-circle-check" style="color: var(--accent-neon);"></i></div>
+            <h3>TRANSMISSION SECURED</h3>
+            <p>Your secure message payload has bypassed external network buffers and successfully hit our operations desk. A case analyst will establish an encrypted reply link shortly.</p>
+            <div class="popup-loading-bar"></div>
         </div>
-    </footer>
+    </div>
 
+    <script src="app.js"></script>
 </body>
 </html>

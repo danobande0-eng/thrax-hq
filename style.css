@@ -1540,3 +1540,59 @@ img.brand-logo-img {
     transform: rotate(180deg);
     color: var(--accent-neon);
 }
+/* ==========================================================================
+   THRAX Contact Layout Modules
+   ========================================================================== */
+.coordinate-node {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.coordinate-node .coord-icon i {
+    color: var(--accent-neon);
+    font-size: 1.1rem;
+    padding-top: 3px;
+    text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.coordinate-node h4 {
+    margin: 0 0 4px 0;
+    color: #fff;
+    font-family: monospace;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.coordinate-node p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.contact-vector-link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-vector-link i {
+    font-size: 1.1rem;
+}
+
+.contact-vector-link span {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+
+.contact-vector-link p {
+    margin: 2px 0 0 0;
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 500;
+}

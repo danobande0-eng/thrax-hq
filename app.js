@@ -185,3 +185,52 @@ function toggleFaqNode(element) {
         answerContainer.style.maxHeight = answerContainer.scrollHeight + "px";
     }
 }
+// Intercept Contact Form Submission, Send Email & Display Fading Custom Alert
+const contactForm = document.querySelector('.contact-intake-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop page from reloading
+
+        const formData = new FormData(contactForm);
+        const submitButton = contactForm.querySelector('.contact-submit');
+        
+        submitButton.innerText = "INITIALIZING SECURE LINK...";
+        submitButton.style.opacity = "0.7";
+
+        const targetUrl = contactForm.getAttribute('action') || 'https://api.web3forms.com/submit';
+
+        // Secure Asynchronous POST Request
+        fetch(targetUrl, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Trigger the Interactive Pop-Up Window Overlay
+                const popup = document.getElementById('intel-success-popup');
+                popup.classList.add('popup-active');
+
+                contactForm.reset();
+
+                // Automatically dissolve after exactly 4 seconds
+                setTimeout(() => {
+                    popup.classList.remove('popup-active');
+                }, 4000);
+            } else {
+                alert("Communication routing failure. Verify parameter syntax.");
+            }
+        })
+        .catch(error => {
+            console.error("Contact Transmission Error:", error);
+            alert("Secure connection loss. Transmission failed.");
+        })
+        .finally(() => {
+            submitButton.innerText = "INITIALIZE SECURE DISPATCH";
+            submitButton.style.opacity = "1";
+        });
+    });
+}
