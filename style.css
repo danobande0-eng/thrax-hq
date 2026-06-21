@@ -437,12 +437,13 @@ body.cyber-theme {
     gap: 12px;
 }
 
-.cyber-logo {
-    width: 28px;
-    height: 28px;
-    background: linear-gradient(135deg, var(--accent-neon), #0066ff);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    box-shadow: 0 0 10px var(--accent-glow);
+./* Brand Logo Scaling Configuration */
+.brand-logo-img {
+    height: 40px; /* Perfectly scales the emblem inside the header context */
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.3)); /* Subtle neon perimeter glow */
+}
 }
 
 .brand-name {
