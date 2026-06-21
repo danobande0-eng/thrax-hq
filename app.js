@@ -44,3 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 2000);
         });
     }
+    // Toggle Functionality for Thrax Analytics Dropdown Matrix
+function toggleNavMatrix() {
+    var navContainer = document.getElementById("nav-links-container");
+    var menuIcon = document.getElementById("menu-icon");
+    
+    // Toggle the display class
+    navContainer.classList.toggle("matrix-active");
+    
+    // Smoothly shift icon design to show it is active
+    if(navContainer.classList.contains("matrix-active")) {
+        menuIcon.className = "fas fa-times"; // Changes to a close "X" symbol
+    } else {
+        menuIcon.className = "fas fa-th-large"; // Snaps back to standard matrix grid
+    }
+}

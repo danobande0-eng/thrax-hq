@@ -748,3 +748,58 @@ img.brand-logo-img {
     gap: 12px;
     max-height: 50px;
 }
+/* Systems Menu Control Interface */
+.nav-matrix-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    background: rgba(24, 34, 50, 0.4);
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-matrix-control:hover {
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.nav-matrix-control i {
+    color: var(--accent-neon);
+    font-size: 1.1rem;
+}
+
+.control-label {
+    font-family: monospace;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+/* Initially hide the link container or display it based on activation states */
+.nav-links {
+    display: none; /* Controlled dynamically by JavaScript */
+    position: absolute;
+    top: 75px;
+    right: 5%;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    z-index: 1001;
+}
+
+/* When active, display links clearly */
+.nav-links.matrix-active {
+    display: flex !important;
+}
+
+.nav-links a {
+    margin: 10px 0 !important;
+    padding: 5px 15px;
+    display: block;
+}

@@ -20,17 +20,22 @@
 
     <!-- Top Navigation Header -->
    <!-- Top Navigation Header -->
-    <header class="main-header">
+   <header class="main-header">
         <div class="logo-container">
-            <!-- Official Brand Logo Integrated Here -->
             <img src="thrax-logo.png" alt="THRAX ANALYTICS Logo" class="brand-logo-img">
             <span class="brand-name">THRAX <span class="accent-text">ANALYTICS</span></span>
         </div>
-        <nav class="nav-links">
+        
+        <div class="nav-matrix-control" onclick="toggleNavMatrix()">
+            <i class="fas fa-th-large" id="menu-icon"></i>
+            <span class="control-label">SYSTEM_MENU</span>
+        </div>
+
+        <nav class="nav-links" id="nav-links-container">
             <a href="index.html" class="active">Command Center</a>
-            <a href="analytics.html">Module_01</a>
-            <a href="architecture.html">Module_02</a>
-            <a href="automation.html">Module_03</a>
+            <a href="analytics.html">Services</a>
+            <a href="architecture.html">FAQs</a>
+            <a href="automation.html">Contact Us</a>
         </nav>
     </header>
 
