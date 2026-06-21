@@ -803,3 +803,313 @@ img.brand-logo-img {
     padding: 5px 15px;
     display: block;
 }
+/* ==========================================================================
+   Thrax Services Grid System & Component Layouts
+   ========================================================================== */
+
+.services-manifesto {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.services-block {
+    margin-top: 60px;
+}
+
+.block-header h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.block-subtitle {
+    color: var(--accent-neon);
+    font-family: monospace;
+    font-size: 0.95rem;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+/* Tier Matrix Columns Layout */
+.tier-matrix-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.tier-matrix-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 35px 25px;
+    flex: 1;
+    min-width: 290px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.tier-matrix-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Featured / Accent Border Focus States */
+.featured-tier {
+    border-color: rgba(0, 255, 204, 0.4);
+    background: linear-gradient(180deg, rgba(24, 34, 50, 0.4) 0%, var(--bg-surface) 100%);
+}
+.high-alert-tier {
+    border-color: rgba(255, 74, 74, 0.3);
+}
+
+.tier-badge {
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    padding: 4px 14px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 0.75rem;
+    border-radius: 20px;
+}
+.level-1-badge { background: #1a2c38; color: #80e5ff; border: 1px solid #336688; }
+.level-2-badge { background: #0c332b; color: var(--accent-neon); border: 1px solid var(--accent-neon); }
+.level-3-badge { background: #3c1414; color: #ff6666; border: 1px solid #aa3333; }
+
+.tier-matrix-card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.tier-deployment {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    min-height: 45px;
+}
+
+.vector-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 20px 0;
+}
+
+.feature-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-checklist li {
+    position: relative;
+    padding-left: 25px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 18px;
+}
+
+.feature-checklist li i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--accent-neon);
+    font-size: 0.95rem;
+}
+
+.high-alert-tier .feature-checklist li i {
+    color: #ff5555;
+}
+
+.nested-include {
+    font-family: monospace;
+    color: var(--accent-neon) !important;
+    background: rgba(0, 255, 204, 0.05);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Specialized Services Grid Layout */
+.specialized-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+@media (max-width: 850px) { .specialized-grid { grid-template-columns: 1fr; } }
+
+.specialized-card {
+    background: rgba(18, 22, 31, 0.6);
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 35px;
+}
+
+.spec-icon {
+    font-size: 2rem;
+    color: var(--accent-neon);
+    margin-bottom: 15px;
+}
+
+.specialized-card h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.specialized-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.sub-specs {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.sub-specs li {
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 0.92rem;
+}
+
+/* The Thrax Advantage Dashboard Block */
+.advantage-banner {
+    background: #111622;
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 8px;
+    margin: 60px 0;
+}
+
+.advantage-banner h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--accent-neon);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
+
+.advantage-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.adv-node {
+    flex: 1;
+    min-width: 250px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.adv-node strong {
+    color: var(--accent-neon);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.05rem;
+}
+
+/* Proof of Concept Interactive Terminal */
+.poc-terminal-box {
+    background: radial-gradient(circle at 0% 0%, rgba(0, 255, 204, 0.08), transparent 60%), #0d111a;
+    border: 2px solid var(--accent-neon);
+    border-radius: 8px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 30px var(--accent-glow);
+    margin-bottom: 40px;
+}
+
+.poc-badge {
+    display: inline-block;
+    background: rgba(0, 255, 204, 0.15);
+    color: var(--accent-neon);
+    padding: 5px 16px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.poc-terminal-box h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin: 0 0 15px 0;
+}
+
+.poc-terminal-box p {
+    color: var(--text-muted);
+    max-width: 750px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.poc-metrics-strip {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    font-family: monospace;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.poc-metric i {
+    color: var(--accent-neon);
+    margin-right: 8px;
+}
+
+.poc-actions-matrix {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    text-decoration: none;
+    padding: 15px 32px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-uplink {
+    background: var(--accent-neon);
+    color: #0a0c10;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+.btn-primary-uplink:hover {
+    background: #fff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.btn-secondary-uplink {
+    border: 1px solid var(--border-color);
+    color: #fff;
+    background: rgba(255,255,255,0.02);
+}
+.btn-secondary-uplink:hover {
+    border-color: var(--accent-neon);
+    color: var(--accent-neon);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
