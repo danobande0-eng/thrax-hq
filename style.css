@@ -1623,86 +1623,139 @@ img.brand-logo-img {
 }
 
 /* Side Drawer Box Panel styling */
+/* ==========================================================================
+   THRAX ANALYTICS | Premium Cyber-Command Side Drawer Layout
+   ========================================================================== */
+
+/* The Main Sliding Box Panel Container */
 .thrax-side-drawer {
     position: fixed;
     top: 0;
-    right: -320px; /* Hidden completely off-screen by default */
-    width: 320px;
+    right: -340px; /* Hidden off-screen */
+    width: 340px;
     height: 100vh;
-    background: rgba(10, 15, 26, 0.98);
-    backdrop-filter: blur(20px);
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    background: rgba(6, 10, 18, 0.96); /* Deep, clean midnight tone */
+    backdrop-filter: blur(25px); /* Premium heavy frosted glass blur */
+    -webkit-backdrop-filter: blur(25px);
+    border-left: 2px solid rgba(0, 255, 204, 0.15); /* Neon accent border strip */
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.7);
     z-index: 10000;
-    padding: 40px 30px;
+    padding: 50px 40px;
     display: flex;
     flex-direction: column;
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1); /* Ultra smooth ease-out */
 }
 
-/* State Change: Activation Toggle Class managed by script */
+/* Active State: Triggered via app.js */
 .thrax-side-drawer.drawer-active {
     right: 0;
 }
 
-/* Close Controller Vector Element */
+/* Futuristic Close Button Unit */
 .drawer-close-btn {
     align-self: flex-end;
-    font-size: 1.3rem;
-    color: var(--text-muted, #888);
-    cursor: pointer;
-    transition: color 0.2s ease;
-    margin-bottom: 50px;
-}
-
-.drawer-close-btn:hover {
-    color: #ff3366; /* Sharp indicator color change */
-}
-
-/* Navigation Links Hierarchy Inside Side Drawer */
-.drawer-navigation-links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.drawer-meta-label {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    color: var(--text-muted, #555);
-    margin-bottom: 10px;
-    font-family: monospace;
-}
-
-.drawer-navigation-links a {
-    color: var(--text-secondary, #ccc);
-    text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-family: monospace;
     letter-spacing: 1px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
     transition: all 0.3s ease;
 }
 
-.drawer-navigation-links a:hover {
-    color: var(--accent-neon, #00ffcc);
-    padding-left: 8px; /* Smooth sliding link hover effect */
+.drawer-close-btn:hover {
+    color: #ff3366;
+    border-color: rgba(255, 51, 102, 0.4);
+    box-shadow: 0 0 12px rgba(255, 51, 102, 0.2);
+    transform: translateY(-2px);
 }
 
-/* Shield Overlay Background Mask Component */
+/* Side Navigation Links Container */
+.drawer-navigation-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+/* Upper Meta Tech Label */
+.drawer-meta-label {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: #00ffcc; /* Cyan branding glow */
+    text-shadow: 0 0 8px rgba(0, 255, 204, 0.4);
+    margin-bottom: 25px;
+    font-family: monospace;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* Individual Link Anchor Elements */
+.drawer-navigation-links a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.70);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+}
+
+/* Left Indicator Bar on Hover */
+.drawer-navigation-links a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: #00ffcc;
+    transition: width 0.3s ease;
+    z-index: -1;
+    opacity: 0.08;
+}
+
+/* Interactive Hover States */
+.drawer-navigation-links a:hover {
+    color: #00ffcc;
+    border-color: rgba(0, 255, 204, 0.3);
+    padding-left: 26px; /* Dynamic push out */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-navigation-links a:hover::before {
+    width: 100%; /* Fills the background track subtly */
+}
+
+/* Active Node State Tracking Indicator */
+.drawer-navigation-links a.active-node {
+    color: #00ffcc;
+    border-color: rgba(0, 255, 204, 0.4);
+    background: rgba(0, 255, 204, 0.04);
+    font-weight: 600;
+}
+
+/* Dark Background Shield Mask Component */
 .drawer-overlay-shield {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
+    background: rgba(3, 5, 10, 0.75); /* Dark matching contrast filter */
+    backdrop-filter: blur(4px);
     z-index: 9999;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s ease;
 }
 
 .drawer-overlay-shield.shield-active {
