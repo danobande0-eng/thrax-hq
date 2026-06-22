@@ -248,7 +248,29 @@
             <p class="copyright">&copy; 2026 THRAX HQ. All rights reserved.</p>
         </div>
     </footer>
-
+<script>
+        // Inline immediate fallback to guarantee navigation works instantly
+        function toggleNavMatrix() {
+            const navLinks = document.getElementById('nav-links-container');
+            const menuIcon = document.getElementById('menu-icon');
+            
+            if (navLinks) {
+                navLinks.classList.toggle('nav-active');
+                if (menuIcon) {
+                    if (navLinks.classList.contains('nav-active')) {
+                        menuIcon.style.transform = "rotate(90deg)";
+                        menuIcon.style.color = "var(--accent-neon)";
+                    } else {
+                        menuIcon.style.transform = "rotate(0deg)";
+                        menuIcon.style.color = "var(--text-muted)";
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
     <script src="app.js"></script>
 </body>
 </html>
