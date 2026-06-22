@@ -1,3 +1,75 @@
+/* ==========================================================================
+   THRAX GLOBAL CORE | Live Ambient Command Backdrop
+   ========================================================================== */
+
+body.cyber-theme {
+    margin: 0;
+    padding: 0;
+    background-color: #03060e; /* True midnight black base */
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Global Ambient Animation Layer */
+body.cyber-theme::before {
+    content: '';
+    position: fixed; /* Stays fixed relative to viewport while you scroll */
+    top: 0;
+    left: 0;
+    width: 200%; /* Spans past boundaries to avoid seam cuts during translation */
+    height: 200%;
+    z-index: -2; /* Sits completely behind all sections, cards, and text */
+    pointer-events: none;
+    opacity: 0.05; /* Kept ultra-subtle so text remains crisp and readable */
+    
+    /* Cyber Grid Vector Matrix */
+    background-image: 
+        linear-gradient(rgba(0, 255, 204, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 204, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px; /* Large cinematic grid mapping size */
+    
+    /* Smooth infinite diagonal drift tracking loop */
+    animation: globalMatrixDrift 40s linear infinite;
+}
+
+/* Subtle Vignette Gradient Mask to ground the layout */
+body.cyber-theme::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    /* Softly dims the edges and bottom so elements blend seamlessly */
+    background: radial-gradient(circle at 50% 30%, transparent 20%, #03060e 80%);
+}
+
+/* Global Matrix Drift Keyframe Coordinates */
+@keyframes globalMatrixDrift {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-40px, -40px); /* Moves exactly one clean grid tile distance */
+    }
+}
+
+/* ==========================================================================
+   OPTIONAL: Make main console cards look like floating glass panels
+   ========================================================================== */
+.module-content, .console-card, .form-container {
+    background: rgba(6, 10, 18, 0.75) !important; /* Semi-transparent paneling */
+    backdrop-filter: blur(12px) !important;       /* Lets the background motion peek through subtly */
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(0, 255, 204, 0.1) !important;
+}
+
+
 /* Global Variables & Reset */
 :root {
     --bg-main: #0a0b0d;
