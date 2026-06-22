@@ -21,20 +21,33 @@
     <!-- Top Navigation Header -->
    <!-- Top Navigation Header -->
   <!-- Sticky Navigation Header (Streamlined Architecture) -->
-    <header class="main-header sticky-header">
+   <header class="main-header sticky-header">
         <div class="logo-container">
             <img src="thrax-logo.png" alt="THRAX ANALYTICS Logo" class="brand-logo-img">
             <span class="brand-name">THRAX <span class="accent-text">ANALYTICS</span></span>
         </div>
         
-        <!-- Permanent Navigation Node Linkbar -->
-        <nav class="nav-links" id="nav-links-container">
-            <a href="index.html" class="active-node">Command Center</a>
+        <div class="side-panel-trigger" id="panel-trigger-btn">
+            <i class="fas fa-bars" id="panel-trigger-icon"></i>
+            <span class="control-label">NAV-MATRIX</span>
+        </div>
+    </header>
+
+    <div class="thrax-side-drawer" id="global-side-drawer">
+        <div class="drawer-close-btn" id="panel-close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        
+        <nav class="drawer-navigation-links">
+            <div class="drawer-meta-label">// NAVIGATION TERMINAL</div>
+            <a href="index.html">Command Center</a>
             <a href="analytics.html">Services</a>
             <a href="architecture.html">FAQs</a>
             <a href="automation.html">Contact Us</a>
         </nav>
-    </header>
+    </div>
+    
+    <div class="drawer-overlay-shield" id="global-drawer-overlay"></div>
 
     <!-- Section 1: Hero Command Matrix -->
     <section class="hero-section">

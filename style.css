@@ -1596,3 +1596,116 @@ img.brand-logo-img {
     font-size: 0.92rem;
     font-weight: 500;
 }
+/* ==========================================================================
+   THRAX ANALYTICS | Sliding Side Panel Drawer Interface Styles
+   ========================================================================== */
+.side-panel-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.side-panel-trigger:hover {
+    border-color: var(--accent-neon, #00ffcc);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.15);
+}
+
+.side-panel-trigger i {
+    color: var(--accent-neon, #00ffcc);
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Side Drawer Box Panel styling */
+.thrax-side-drawer {
+    position: fixed;
+    top: 0;
+    right: -320px; /* Hidden completely off-screen by default */
+    width: 320px;
+    height: 100vh;
+    background: rgba(10, 15, 26, 0.98);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* State Change: Activation Toggle Class managed by script */
+.thrax-side-drawer.drawer-active {
+    right: 0;
+}
+
+/* Close Controller Vector Element */
+.drawer-close-btn {
+    align-self: flex-end;
+    font-size: 1.3rem;
+    color: var(--text-muted, #888);
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-bottom: 50px;
+}
+
+.drawer-close-btn:hover {
+    color: #ff3366; /* Sharp indicator color change */
+}
+
+/* Navigation Links Hierarchy Inside Side Drawer */
+.drawer-navigation-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.drawer-meta-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--text-muted, #555);
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.drawer-navigation-links a {
+    color: var(--text-secondary, #ccc);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+}
+
+.drawer-navigation-links a:hover {
+    color: var(--accent-neon, #00ffcc);
+    padding-left: 8px; /* Smooth sliding link hover effect */
+}
+
+/* Shield Overlay Background Mask Component */
+.drawer-overlay-shield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.drawer-overlay-shield.shield-active {
+    opacity: 1;
+    pointer-events: auto;
+}
