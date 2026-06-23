@@ -1860,3 +1860,18 @@ header, .header-container, .site-header {
     -webkit-backdrop-filter: blur(20px) !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
+/* ==========================================================================
+   THRAX SUBPAGE CONTENT SHIELD | Fixed Header Offsetting
+   ========================================================================== */
+
+/* This pushes your main content down exactly enough to clear the fixed header on load */
+main, 
+.main-content, 
+body.cyber-theme {
+    padding-top: 100px; /* Adjust this number to match the actual height of your header box */
+}
+
+/* Ensure the homepage hero section behaves properly with the new padding */
+.hero-section {
+    margin-top: -20px; 
+}
