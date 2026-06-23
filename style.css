@@ -1904,3 +1904,48 @@ body.cyber-theme {
 .faq-question {
     cursor: pointer;
 }
+/* ==========================================================================
+   THRAX SYSTEMS | CORNER OVERLAY GLOW & BREATHING MATRIX
+   ========================================================================== */
+.corner-bracket {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 4px rgba(0, 255, 204, 0.2);
+}
+
+@keyframes hudPulse {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.75; 
+        transform: scale(1.03); 
+        filter: drop-shadow(0 0 3px rgba(0, 255, 204, 0.5));
+    }
+}
+
+.system-overlay-frame .corner-bracket {
+    animation: hudPulse 5s infinite ease-in-out;
+}
+/* ==========================================================================
+   THRAX CRYO-SCROLL INTERFACE TAPE
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #02050a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 204, 0.2);
+    border-radius: 3px;
+    transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00ffcc;
+    box-shadow: 0 0 8px #00ffcc;
+}
