@@ -126,3 +126,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+// ==========================================================================
+// THRAX SYSTEMS | VIEWPORT SCROLL & HEADER DIRECTION TRACKING
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+    // Select your header layer (matches the class inside your CSS)
+    const header = document.querySelector("header") || document.querySelector(".header-container") || document.querySelector(".site-header");
+    
+    if (!header) return; // Fail-safe if header class isn't detected on a specific subpage
+
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+        const currentScrollY = window.scrollY;
+
+        // 1. If scrolling down and past the threshold, tuck the header away
+        if (currentScrollY > lastScrollY && currentScrollY > 80) {
+            header.classList.add("header-hidden");
+        } 
+        // 2. If scrolling up, bring the header instantly back into operational view
+        else {
+            header.classList.remove("header-hidden");
+        }
+
+        // 3. Add background depth shading if page is scrolled off the dead top
+        if (currentScrollY > 20) {
+            header.classList.add("header-scrolled");
+        } else {
+            header.classList.remove("header-scrolled");
+        }
+
+        lastScrollY = currentScrollY;
+    });
+});
