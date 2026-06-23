@@ -70,6 +70,21 @@
         </div>
     </section>
 
+<section class="console-card telemetry-log-container" style="margin: 20px auto; max-width: 1200px; padding: 25px;">
+        <div class="terminal-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0, 255, 204, 0.15); padding-bottom: 10px; margin-bottom: 15px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="width: 10px; height: 10px; background-color: #00ffcc; border-radius: 50%; display: inline-block; box-shadow: 0 0 8px #00ffcc;"></span>
+                <span style="font-family: monospace; font-size: 0.85rem; color: #00ffcc; letter-spacing: 1px;">SYS_LOG // AMBIENT_INTEL_STREAM</span>
+            </div>
+            <div style="font-family: monospace; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4);">
+                LOC_ID // NGR.05
+            </div>
+        </div>
+
+        <div id="telemetry-terminal" style="height: 180px; overflow-y: hidden; font-family: 'Courier New', Courier, monospace; font-size: 0.85rem; line-height: 1.6; color: #a0aec0; padding-right: 10px;">
+            </div>
+    </section>
+
     <!-- Section 2: The Challenge Matrix -->
     <section class="challenge-section">
         <div class="section-header">
@@ -175,5 +190,42 @@
     </footer>
 
     <script src="app.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const terminal = document.getElementById("telemetry-terminal");
+            
+            const logSequences = [
+                "[SECURE_INTEL] // Initializing parameter intake matrix...",
+                "[SECURE_INTEL] // Deploying cross-reference heuristics across registries...",
+                "[SECURE_INTEL] // Scanning organizational credentials & digital footprints...",
+                "[SECURE_INTEL] // Querying historical system matrices for anomaly detection...",
+                "[SECURE_INTEL] // System cross-referencing background integrity databases...",
+                "[SECURE_INTEL] // Extracting decentralized telemetry data packets...",
+                "[SECURE_INTEL] // Verification pipeline mapping target identity nodes...",
+                "[SECURE_INTEL] // STATUS: COMPILING SANITIZED RISK ADVISORY BRIEF [SUCCESS]",
+                "[SECURE_INTEL] // System idle. Refreshing dynamic tracking arrays...",
+                "[SECURE_INTEL] // Processing deep background verification parameters...",
+                "[SECURE_INTEL] // Multi-layered threat mitigation protocols fully active."
+            ];
+
+            function appendLog() {
+                const randomLine = logSequences[Math.floor(Math.random() * logSequences.length)];
+                const time = new Date().toLocaleTimeString();
+                
+                const logElement = document.createElement("div");
+                logElement.style.marginBottom = "6px";
+                logElement.innerHTML = `<span style="color: rgba(0, 255, 204, 0.6); font-weight: bold;">[${time}]</span> <span style="color: #ffffff;">${randomLine}</span>`;
+                
+                terminal.appendChild(logElement);
+
+                if (terminal.childNodes.length > 7) {
+                    terminal.removeChild(terminal.firstChild);
+                }
+            }
+
+            for(let i=0; i<4; i++) { setTimeout(appendLog, i * 400); }
+            setInterval(appendLog, 4500);
+        });
+    </script>
 </body>
 </html>
