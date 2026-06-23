@@ -160,25 +160,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 // ==========================================================================
-// THRAX SYSTEMS | FAQ INTERACTIVE ACCORDION ENGINE
+// THRAX SYSTEMS | NODE ACCORDION CONTROLLER ENGINE
 // ==========================================================================
-document.addEventListener("DOMContentLoaded", function () {
-    const faqQuestions = document.querySelectorAll(".faq-question");
+function toggleFaqNode(element) {
+    // Find the parent container element (.faq-node-accordion)
+    const faqNode = element.closest('.faq-node-accordion');
+    
+    if (!faqNode) return;
 
-    faqQuestions.forEach(question => {
-        question.addEventListener("click", () => {
-            const currentItem = question.parentElement;
-            const isActive = currentItem.classList.contains("active");
+    // Check if it is already open
+    const isActive = faqNode.classList.contains('active');
 
-            // OPTIONAL CLOSE-ALL: Closes any other open FAQ item when a new one is selected
-            document.querySelectorAll(".faq-item").forEach(item => {
-                item.classList.remove("active");
-            });
-
-            // If the item wasn't already active, open it smoothly
-            if (!isActive) {
-                currentItem.classList.add("active");
-            }
-        });
+    // OPTIONAL: Auto-close any other open FAQ items on the screen
+    document.querySelectorAll('.faq-node-accordion').forEach(node => {
+        node.classList.remove('active');
     });
-});
+
+    // If it wasn't open, open it right now
+    if (!isActive) {
+        faqNode.classList.add('active');
+    }
+}

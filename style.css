@@ -1876,41 +1876,31 @@ body.cyber-theme {
     margin-top: -20px; 
 }
 /* ==========================================================================
-   THRAX FAQ ACCORDION MATRIX | Dynamic Reveal States
+   THRAX FAQ NODE ACCORDION | Dynamic Reveal States
    ========================================================================== */
 
-/* Hide answers by default */
+/* Hide answer nodes on initial system load */
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
     opacity: 0;
-    padding-top: 0;
 }
 
-/* Active class injected by JavaScript when clicked */
-.faq-item.active .faq-answer {
-    max-height: 200px; /* Adjust if your answers are exceptionally long text blocks */
+/* Operational active state when opened */
+.faq-node-accordion.active .faq-answer {
+    max-height: 300px; /* Gives the text plenty of room to display */
     opacity: 1;
-    padding-top: 10px;
-    border-top: 1px solid rgba(0, 255, 204, 0.1);
-    margin-top: 10px;
+    padding-top: 12px;
+    margin-top: 8px;
 }
 
-/* Rotate the micro-chevron indicator gracefully on active state */
-.faq-item.active .faq-icon {
+/* Rotate the micro chevron smoothly */
+.faq-node-accordion.active .fa-chevron-down {
     transform: rotate(180deg);
     color: #00ffcc;
 }
 
 .faq-question {
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: color 0.2s ease;
-}
-
-.faq-question:hover {
-    color: #00ffcc;
 }
