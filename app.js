@@ -159,3 +159,26 @@ document.addEventListener("DOMContentLoaded", function () {
         lastScrollY = currentScrollY;
     });
 });
+// ==========================================================================
+// THRAX SYSTEMS | FAQ INTERACTIVE ACCORDION ENGINE
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", function () {
+    const faqQuestions = document.querySelectorAll(".faq-question");
+
+    faqQuestions.forEach(question => {
+        question.addEventListener("click", () => {
+            const currentItem = question.parentElement;
+            const isActive = currentItem.classList.contains("active");
+
+            // OPTIONAL CLOSE-ALL: Closes any other open FAQ item when a new one is selected
+            document.querySelectorAll(".faq-item").forEach(item => {
+                item.classList.remove("active");
+            });
+
+            // If the item wasn't already active, open it smoothly
+            if (!isActive) {
+                currentItem.classList.add("active");
+            }
+        });
+    });
+});
